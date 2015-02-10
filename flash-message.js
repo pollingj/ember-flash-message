@@ -20,7 +20,7 @@ Ember.FlashMessageController = Ember.Controller.extend({
 });
 Ember.Handlebars.registerHelper('flashMessage', function(options) {
   var template = options.fn,
-      container = options.data.keywords.controller.container,
+      container = options.data.root.container,
       controller = container.lookup('controller:flashMessage'),
 
       parent = Ember.ContainerView.extend({
